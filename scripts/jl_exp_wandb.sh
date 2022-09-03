@@ -17,7 +17,7 @@ export WANDB_PROJECT='$WANDB_PROJECT'
 export WANDB_API_KEY='$WANDB_API_KEY'
 
 # move to the repo
-git clone https://github.com/codingpot/git-mlops.git
+git clone https://github.com/v-toandv18/git-mlops.git
 
 # install dependencies
 cd git-mlops
@@ -37,7 +37,7 @@ export WANDB_RUN_NAME=$CUR_BRANCH
 dvc repro
 
 exp_result=$(dvc exp show --only-changed --md)
-wandb_url="https://wandb.ai/codingpot/git-mlops"
+wandb_url="https://wandb.ai/v-toandv18/git-mlops"
 gh pr comment $CUR_PR_ID --body "[Visit W&B Log Page for this Pull Request]($wandb_url)"
 
 git reset --hard
